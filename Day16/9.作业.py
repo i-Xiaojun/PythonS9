@@ -23,5 +23,5 @@
 # 6.1 计算购买每只股票的总价
 # 6.2 用filter过滤输出,单价大于100的股票有哪些
 
-# No.3
+# 3.用map来处理字符串列表,把列表中所有人都变成sb, 例如alex_sb
 name=['alex','wupeiqi','yuanhao','nezha']
