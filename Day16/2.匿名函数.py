@@ -8,3 +8,8 @@ t2 = (('c'),('d'))
 #     print(i)
 z = lambda a,b:zip(a,b)
 print(z(t1,t2))
+
+#add = lambda x,y : x+y
+#print(max)
+dic = {'k1':10,'k2':102,'k3':103}
+print(max(dic,key=lambda k:dic[k]))
