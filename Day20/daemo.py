@@ -1,4 +1,4 @@
-__all__ = ["readme"]
+__all__ = ["money","readme"]
 
 money = 100
 

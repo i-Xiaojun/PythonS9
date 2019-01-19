@@ -1,3 +1,3 @@
-from daemo import *
+from Day20.daemo import *
 
 print(money)
