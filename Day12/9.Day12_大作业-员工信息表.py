@@ -28,14 +28,23 @@
 
 
 
-f = open('Member_Info.txt')
-for line in f:
-    li = line.strip().split(',')
-    if 'IT' in li:
-        print(li[1])
-f.close()
+# f = open('Member_Info.txt')
+# for line in f:
+#     li = line.strip().split(',')
+#     if 'IT' in li:
+#         print(li[1])
+# f.close()
+#
+#
+#
+# def get_name(tiaojian):
+#     pass
 
+def user_input():
+    my_sql = input('>>>')
+    sql_li = my_sql.split(' ')
+    i = 0
+    print([i for i in sql_li])
+    #print(sql_li[1])
 
-
-def get_name(tiaojian):
-    pass
+user_input()
