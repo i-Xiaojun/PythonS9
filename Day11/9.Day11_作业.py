@@ -6,18 +6,27 @@
 # 具体：实现下载的页面存放于文件中，如果文件内有值（文件大小不为0），就优先从文件中读取网页内容，否则，就去下载，然后存到文件中
 
 # 1.编写装饰器，为多个函数加上认证的功能（用户的账号密码来源于文件）, 要求登录成功一次，后续的函数都无需再输入用户名和密码
-def login():
-    def inner():
-        f = open('UserDB.txt')
-        for line in f:
-            print(line.strip())
-        f.close()
-        func1()
-        func2()
+def login(func):
+    def inner(*args,**kwargs):
+        # f = open('UserDB.txt')
+        # for line in f:
+        #     print(line.strip())
+        # f.close()
+        username = input('Pls input username')
+        password = input('Pls input password')
+        if username == 'admin' and password == '123':
+            print('登录成功')
+            ret = func(*args,**kwargs)
+            return ret
+        else:
+            print('登录失败')
+    return inner
 
+@login
 def func1():
     print('Welcome Func1')
 
+@login
 def func2():
     print('Welcome Func2')
 
@@ -35,4 +44,5 @@ def my_func():
         else:
             print('Pls retry: ')
 
-my_func()
+func1()
+func2()
