@@ -27,3 +27,15 @@
 # 其他需求尽量用函数实现
 
 
+
+f = open('Member_Info.txt')
+for line in f:
+    li = line.strip().split(',')
+    if 'IT' in li:
+        print(li[1])
+f.close()
+
+
+
+def get_name(tiaojian):
+    pass
