@@ -1,0 +1,2 @@
+func2func1func2func1
+func2
